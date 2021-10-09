@@ -3,7 +3,9 @@ provider "aws"{
   region  = "eu-west-2"
 }
 
-resource "aws_s3_bucket" "tf_course" {
+resource "aws_s3_bucket" "prod_tf_course" {
   bucket = "tf-materdolorosa-2021"
   acl    = "private"
 }
+
+resource "aws_default_vpc" "default"{} 
